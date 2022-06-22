@@ -1,7 +1,7 @@
 # Moonlight
 
-##Collaborators
-####Melisa Garcia, Wayne Rasmussen, Lia Yaghobi, John Yalung
+## Collaborators
+#### Melisa Garcia, Wayne Rasmussen, Lia Yaghobi, John Yalung
 CSUN Summer 2022 COMP 469 (Introduction to Artificial Intelligence)
 ##
 

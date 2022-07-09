@@ -32,10 +32,8 @@ def solve_bfs(board, row, cols, fwdslash, bkwdslash):
                 bkwdslash[row - j + N - 1] = False
     return False
 
-
 def solveproblem():
-    # here you need to make a loop over rows
-    # and a nested one over cols
+
     if not solve_bfs(board, 0, cols, fwdslash, bkwdslash):
         print("Solution does not exist")
         return False

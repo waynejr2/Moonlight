@@ -10,14 +10,8 @@ def printSolution(board):
             print(board[i][j], end=" ")
         print()
 
-
-# A utility function to check if a queen can
-# be placed on board[row][col]. Note that this
-# function is called when "col" queens are
-# already placed in columns from 0 to col -1.
-# So we need to check only left side for
-# attacking queens
-def isSafe(board, row, col):
+#a method that checks if the queen is safe in the square
+def noDanger(board, row, col):
     # Check this row on left side
     for i in range(col):
         if board[row][i] == 1:
@@ -49,15 +43,15 @@ def isSafe(board, row, col):
 
     return True
 
-def DFS(board, col):
-    if col >= N:
+def DFS(board, max, col):
+    if col == max:
         return True
 
     else:
-        for r in range(N):
-            if isSafe(board, r, col):
+        for r in range(max):
+            if noDanger(board, r, col):
                 board[r][col] = 1
-                if DFS(board, col+1) == True:
+                if DFS(board, max, col+1) == True:
                     return True
                 board[r][col] = 0
 
@@ -69,7 +63,7 @@ def solveNQ():
              [0, 0, 0, 0],
              [0, 0, 0, 0]]
 
-    DFS(board, 0)
+    DFS(board, N, 0)
     printSolution(board)
     return True
 
